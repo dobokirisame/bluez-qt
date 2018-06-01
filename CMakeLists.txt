@@ -4,7 +4,7 @@ set(KF5_VERSION "5.47.0") # handled by release scripts
 project(BluezQt VERSION ${KF5_VERSION})
 
 include(FeatureSummary)
-find_package(ECM 5.46.0 NO_MODULE)
+find_package(ECM 5.18.0 NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://projects.kde.org/projects/kdesupport/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
@@ -14,7 +14,7 @@ include(FeatureSummary)
 include(GenerateExportHeader)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
-include(ECMAddQch)
+#include(ECMAddQch)
 include(CMakePackageConfigHelpers)
 include(KDEInstallDirs)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
@@ -33,7 +33,7 @@ ecm_setup_version(PROJECT
 )
 
 # Dependencies
-set(REQUIRED_QT_VERSION 5.8.0)
+set(REQUIRED_QT_VERSION "5.3.0")
 
 # Required Qt5 components to build this framework
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core DBus Network)
