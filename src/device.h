@@ -424,6 +424,11 @@ Q_SIGNALS:
     void nameChanged(const QString &name);
 
     /**
+     * Indicates that device's address have changed.
+     */
+    void addressChanged(const QString &address);
+
+    /**
      * Indicates that device's friendly name have changed.
      */
     void friendlyNameChanged(const QString &friendlyName);
